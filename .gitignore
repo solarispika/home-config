@@ -1,0 +1,12 @@
+.*
+Desktop
+Downloads
+Templates
+tmp
+mnt
+*.log
+*core
+*.swp
+*.swo
+*.bak
+
