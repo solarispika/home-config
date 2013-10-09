@@ -16,6 +16,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'godlygeek/tabular'
 
 " tmux conf highlight
 Bundle 'peterhoeg/vim-tmux'
