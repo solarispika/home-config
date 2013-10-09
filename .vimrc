@@ -15,6 +15,7 @@ Bundle 'simplyzhao/cscope_maps.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'majutsushi/tagbar'
+Bundle 'scrooloose/nerdcommenter'
 
 " tmux conf highlight
 Bundle 'peterhoeg/vim-tmux'
