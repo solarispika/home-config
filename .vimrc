@@ -52,3 +52,4 @@ nnoremap / :set hlsearch <cr> /
 
 map <F10> :set number! <cr>
 
+map <F11> :TagbarToggle <cr>
