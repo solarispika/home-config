@@ -17,6 +17,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'godlygeek/tabular'
+Bundle 'sjl/gundo.vim'
 
 " tmux conf highlight
 Bundle 'peterhoeg/vim-tmux'
@@ -44,6 +45,7 @@ set ttymouse=xterm2
 set nowrap
 set background=dark
 set visualbell
+set encoding=utf-8
 
 syntax on
 
