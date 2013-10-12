@@ -51,6 +51,8 @@ set encoding=utf-8
 syntax on
 
 let g:hardtime_default_on = 1
+let g:VimuxOrientation = "h"
+
 map <F8> :set hlsearch! <cr>
 nnoremap / :set hlsearch <cr> /
 
