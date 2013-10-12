@@ -18,6 +18,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'godlygeek/tabular'
 Bundle 'sjl/gundo.vim'
+Bundle 'takac/vim-hardtime'
 
 " tmux conf highlight
 Bundle 'peterhoeg/vim-tmux'
@@ -49,6 +50,7 @@ set encoding=utf-8
 
 syntax on
 
+let g:hardtime_default_on = 1
 map <F8> :set hlsearch! <cr>
 nnoremap / :set hlsearch <cr> /
 
