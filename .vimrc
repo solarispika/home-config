@@ -59,3 +59,11 @@ nnoremap / :set hlsearch <cr> /
 map <F10> :set number! <cr>
 
 map <F11> :TagbarToggle <cr>
+
+augroup ft_js
+  au!
+  au FileType js setl  ts=2 sts=2 sw=2 et
+  au FileType jquery setl ts=2 sts=2 sw=2 et
+  au FileType javascript setl ts=2 sts=2 sw=2 et
+augroup END
+
