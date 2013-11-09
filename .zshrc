@@ -13,6 +13,7 @@ ZSH_THEME="jonathan"
 alias cp='nocorrect cp'
 alias mv='nocorrect mv'
 alias mkdir='nocorrect mkdir'
+alias flac='flac -V -8 -A flattop -A tukey\(0.5\)'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
