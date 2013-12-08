@@ -60,3 +60,20 @@ bindkey '\eOA' up-line-or-beginning-search
 bindkey '\e[A' up-line-or-beginning-search
 bindkey '\eOB' down-line-or-beginning-search
 bindkey '\e[B' down-line-or-beginning-search
+
+insert-root-prefix () {
+   local prefix
+   case $(uname -s) in
+      "SunOS")
+         prefix="pfexec"
+      ;;
+      *)
+         prefix="sudo"
+      ;;
+   esac
+   BUFFER="$prefix $BUFFER"
+   CURSOR=$(($CURSOR + $#prefix + 1))
+}
+
+zle -N insert-root-prefix
+bindkey "^[f" insert-root-prefix
