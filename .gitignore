@@ -6,3 +6,8 @@
 /.viminfo
 /.tig_history
 *.swp
+/.zsh_history
+/.oh-my-zsh
+/.nvm
+/.vim
+/.vimrc
