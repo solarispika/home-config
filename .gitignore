@@ -1,0 +1,8 @@
+/.zcompdump
+/.cache
+/.profile
+/.bashrc
+/.bash_logout
+/.viminfo
+/.tig_history
+*.swp
