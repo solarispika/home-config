@@ -1,1 +1,115 @@
 autocmd FileType cpp,hpp,h,c,javascript,typescript :call coc#config("suggest.autoTrigger", "none")
+
+set so=3
+set signcolumn=yes
+
+if has("termguicolors")
+    " enable true color
+    set termguicolors
+endif
+
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+set statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+
+" Tagbar for CMake {{{
+let g:tagbar_type_cmake = {
+  \ 'ctagstype' : 'CMake',
+  \ 'kinds' : [
+    \ 'f:functions',
+    \ 'm:macros',
+    \ 't:targets',
+    \ 'v:variable definitions',
+    \ 'D:options specified with -D',
+    \ 'p:projects',
+    \ 'r:regex'
+  \ ]
+\ }
+" }}}
+
+" Syntastic {{{
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_sh_shellcheck_args = "-x"
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_cpp_config_file = '.syntastic_cpp_config'
+let g:syntastic_python_checkers = ['python3', 'pylint']
+let g:syntastic_typescript_checkers = ['tslint']
+let g:syntastic_typescriptreact_checkers = ['tslint']
+" }}}
+
+" YCM {{{
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_extra_conf_globlist = ['/synosrc/synosrc/ds.base/source/.ycm_extra_conf.py','!~/*']
+" let g:ycm_key_list_stop_completion = [ '<C-y>', '<Enter>' ]
+" }}}
+
+" Python {{{
+Plug 'davidhalter/jedi-vim'
+Plug 'psf/black', { 'branch': 'stable' }
+let g:black_skip_string_normalization = 1
+augroup pythonFold
+  autocmd!
+  autocmd FileType python set foldmethod=indent
+  autocmd FileType python set foldlevel=0
+augroup END
+" }}}
+
+" YAML {{{
+augroup yamlFold
+  autocmd!
+  autocmd FileType yaml set foldmethod=indent
+  autocmd FileType yaml set foldlevel=0
+augroup END
+" }}}
+
+" JSON schema {{{
+Plug 'Quramy/vison'
+" }}}
+
+" Javascript {{{
+" https://medium.com/swlh/ultimate-vim-typescript-setup-35b5ac5c8c4e
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+" }}}
+
+" 
+set path+=**
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#tabline#fnametruncate = 16
+let g:airline#extensions#tabline#fnamecollapse = 2
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nmap <leader>bq :bp <BAR> bd #<CR>
+
+set bg=dark
+
+let c = 1
+while c <= 99
+    execute "nnoremap " . c . "gb :" . c . "b\<CR>"
+      let c += 1
+    endwhile
