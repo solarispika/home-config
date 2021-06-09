@@ -70,7 +70,7 @@ DISABLE_MAGIC_FUNCTIONS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tig tmux gitignore pipenv npm yarn)
+plugins=(git tig tmux gitignore pipenv npm yarn ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
