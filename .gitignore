@@ -4,11 +4,12 @@
 /.bashrc
 /.bash_logout
 /.viminfo
-/.tig_history
+/.*_history
 *.swp
-/.zsh_history
 /.oh-my-zsh
 /.nvm
 /.vim
 /.vimrc
 /.ssh
+/.tmux
+/.tmux.conf
