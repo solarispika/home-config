@@ -5,6 +5,7 @@ set -euo pipefail
 DIR=$(dirname "$0")
 
 command -v zsh > /dev/null 2>&1 || sudo apt-get install zsh
+command -v jq > /dev/null 2>&1 || sudo apt-get install jq
 command -v git > /dev/null 2>&1 || sudo apt-get install git
 
 git config --global user.name "Sung, Po Han"
