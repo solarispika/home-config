@@ -111,6 +111,5 @@ export EDITOR=vim
 bindkey \^U backword-kill-line
 setopt SH_WORD_SPLIT
 
-source $HOME/.local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
-
 path+=($HOME/.local/bin)
+source $HOME/.local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
