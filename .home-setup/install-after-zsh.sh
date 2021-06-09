@@ -27,5 +27,5 @@ command -v cscope > /dev/null 2>&1 || sudo apt-get install cscope
 
 vim -E +PlugUpgrade +PlugUpdate +PlugClean! +qall
 sudo apt install build-essential cmake vim-nox python3-dev
-(cd ~/.vim/bundle/YouCompleteMe && python3 install.py --all)
+(cd ~/.vim/bundle/YouCompleteMe && python3 install.py --clangd-completer --ts-completer)
 
