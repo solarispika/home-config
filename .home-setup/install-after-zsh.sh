@@ -21,7 +21,11 @@ pip install --user powerline-status
 
 git clone https://github.com/gpakosz/.tmux.git
 ln -sf $HOME/.tmux/.tmux.conf $HOME/
-cp $HOME/.tmux/.tmux.conf.local $HOME/
+if [ ! -f "$HOME/.tmux.conf.local" ]; then
+  cp $HOME/.tmux/.tmux.conf.local $HOME/
+else
+  echo "$HOME/.tmux.conf.local is not copied due to its existence."
+fi
 
 command -v cscope > /dev/null 2>&1 || sudo apt-get install cscope
 
