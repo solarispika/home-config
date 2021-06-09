@@ -22,3 +22,5 @@ pip install --user powerline-status
 git clone https://github.com/gpakosz/.tmux.git
 ln -sf $HOME/.tmux/.tmux.conf $HOME/
 cp $HOME/.tmux/.tmux.conf.local $HOME/
+
+command -v cscope > /dev/null 2>&1 || sudo apt-get install cscope
