@@ -14,4 +14,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 zsh "$DIR/install-after-zsh.sh"
 
+echo "Changing shell to zsh"
+chsh -s /usr/bin/zsh
+
 echo "Setup completed. Please login again."
