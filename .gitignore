@@ -13,3 +13,7 @@
 /.ssh
 /.tmux
 /.tmux.conf
+/.local
+/.npm
+/.gem
+/.lesshst
