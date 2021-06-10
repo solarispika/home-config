@@ -1,7 +1,7 @@
 autocmd FileType cpp,hpp,h,c,javascript,typescript :call coc#config("suggest.autoTrigger", "none")
 
 set so=3
-set signcolumn=yes
+set signcolumn=number
 
 if has("termguicolors")
     " enable true color
